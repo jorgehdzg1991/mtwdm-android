@@ -22,5 +22,8 @@
 
         public const string ObtenerTodosViajes =
             "ProyectoFinal4.proc_Viajes_Obt";
+
+        public const string InsertarPosicionesViaje =
+            "ProyectoFinal4.proc_PosicionesViaje_Ins";
     }
 }

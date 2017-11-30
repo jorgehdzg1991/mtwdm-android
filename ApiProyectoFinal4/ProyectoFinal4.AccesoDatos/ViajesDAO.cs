@@ -57,15 +57,18 @@ namespace ProyectoFinal4.AccesoDatos
                 {
                     var viaje = consulta.Read<Viaje>().FirstOrDefault();
 
-                    viaje.Detalle = consulta.Read<DetalleViaje>().FirstOrDefault();
-                    viaje.Gastos = consulta.Read<GastoViaje>().AsList();
-                    viaje.Posiciones = consulta
-                        .Read<PosicionViaje, Coordenada, PosicionViaje>(
-                            (posicion, coordenada) =>
+                    if (viaje != null)
                     {
-                        posicion.Coordenada = coordenada;
-                        return posicion;
-                    }).AsList();
+                        viaje.Detalle = consulta.Read<DetalleViaje>().FirstOrDefault();
+                        viaje.Gastos = consulta.Read<GastoViaje>().AsList();
+                        viaje.Posiciones = consulta
+                            .Read<PosicionViaje, Coordenada, PosicionViaje>(
+                                (posicion, coordenada) =>
+                                {
+                                    posicion.Coordenada = coordenada;
+                                    return posicion;
+                                }, "CoordenadaId").AsList();
+                    }
 
                     return viaje;
                 }

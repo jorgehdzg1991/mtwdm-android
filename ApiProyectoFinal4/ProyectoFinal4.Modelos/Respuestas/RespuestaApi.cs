@@ -5,7 +5,7 @@ namespace ProyectoFinal4.Modelos.Respuestas
 {
     public class RespuestaApi<T>
     {
-        const string _mensajeError =
+        private const string MensajeError =
             "Ha ocurrido un error en el servidor.\n\nMensaje de la excepción:\n\n";
 
         public bool TieneError { get; set; }
@@ -21,7 +21,7 @@ namespace ProyectoFinal4.Modelos.Respuestas
         public void ManejarExepcion(Exception ex)
         {
             TieneError = true;
-            Mensaje = _mensajeError + ex.Message;
+            Mensaje = MensajeError + ex.Message;
             CodigoEstadoHttp = HttpStatusCode.InternalServerError;
         }
     }

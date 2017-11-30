@@ -3,3 +3,8 @@
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Modelos/obj/Debug/ProyectoFinal4.Modelos.csproj.CoreCompileInputs.cache
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Modelos/obj/Debug/ProyectoFinal4.Modelos.dll
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Modelos/obj/Debug/ProyectoFinal4.Modelos.pdb
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Modelos\bin\Debug\ProyectoFinal4.Modelos.dll
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Modelos\bin\Debug\ProyectoFinal4.Modelos.pdb
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Modelos\obj\Debug\ProyectoFinal4.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Modelos\obj\Debug\ProyectoFinal4.Modelos.dll
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Modelos\obj\Debug\ProyectoFinal4.Modelos.pdb

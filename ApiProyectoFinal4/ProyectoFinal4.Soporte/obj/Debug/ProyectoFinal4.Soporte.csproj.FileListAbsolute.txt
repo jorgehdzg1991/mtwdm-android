@@ -4,3 +4,8 @@
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Soporte/obj/Debug/ProyectoFinal4.Soporte.dll
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Soporte/obj/Debug/ProyectoFinal4.Soporte.pdb
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.Soporte/obj/Debug/ProyectoFinal4.Soporte.csprojResolveAssemblyReference.cache
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Soporte\bin\Debug\ProyectoFinal4.Soporte.dll
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Soporte\bin\Debug\ProyectoFinal4.Soporte.pdb
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Soporte\obj\Debug\ProyectoFinal4.Soporte.csproj.CoreCompileInputs.cache
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Soporte\obj\Debug\ProyectoFinal4.Soporte.dll
+C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.Soporte\obj\Debug\ProyectoFinal4.Soporte.pdb
