@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC36C23E-39D6-4087-8B42-7E353ED720F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ProyectoFinal4.LogicaNegocio</RootNamespace>
+    <AssemblyName>ProyectoFinal4.LogicaNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuariosBL.cs" />
+    <Compile Include="ViajesBL.cs" />
+    <Compile Include="GastosViajesBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoFinal4.Modelos\ProyectoFinal4.Modelos.csproj">
+      <Project>{AE8AECDA-16DC-453C-844B-32EA96FD42E0}</Project>
+      <Name>ProyectoFinal4.Modelos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoFinal4.AccesoDatos\ProyectoFinal4.AccesoDatos.csproj">
+      <Project>{D67DA03F-6081-4081-8A3D-FA04579F28B9}</Project>
+      <Name>ProyectoFinal4.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoFinal4.Soporte\ProyectoFinal4.Soporte.csproj">
+      <Project>{270B4354-A2EE-40EC-A28C-3952BFF4A524}</Project>
+      <Name>ProyectoFinal4.Soporte</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,16 @@
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll.config
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.pdb
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/MySql.Data.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.pdb
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.pdb
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.xml
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/MySql.Data.xml
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csprojResolveAssemblyReference.cache
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csproj.CoreCompileInputs.cache
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.dll
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.pdb
+/Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.pdb
