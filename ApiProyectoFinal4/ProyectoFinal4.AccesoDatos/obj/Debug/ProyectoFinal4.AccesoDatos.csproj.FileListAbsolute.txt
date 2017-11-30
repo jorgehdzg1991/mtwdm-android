@@ -14,18 +14,33 @@
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.dll
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.pdb
 /Users/jorgehernandezgarcia/Projects/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.pdb
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.AccesoDatos.dll.config
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.AccesoDatos.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.AccesoDatos.pdb
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\Dapper.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\MySql.Data.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.Modelos.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.Soporte.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.Modelos.pdb
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\ProyectoFinal4.Soporte.pdb
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\Dapper.pdb
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\bin\Debug\Dapper.xml
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\obj\Debug\ProyectoFinal4.AccesoDatos.csprojResolveAssemblyReference.cache
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\obj\Debug\ProyectoFinal4.AccesoDatos.csproj.CoreCompileInputs.cache
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\obj\Debug\ProyectoFinal4.AccesoDatos.dll
-C:\Users\jorge\Desktop\mtwdm-android-master\ApiProyectoFinal4\ProyectoFinal4.AccesoDatos\obj\Debug\ProyectoFinal4.AccesoDatos.pdb
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll.config
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.pdb
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/MySql.Data.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.pdb
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.pdb
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.pdb
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.xml
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csprojResolveAssemblyReference.cache
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csproj.CoreCompileInputs.cache
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.dll
+C:/Users/jorge/Desktop/mtwdm-android-master/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.pdb
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll.config
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.AccesoDatos.pdb
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/MySql.Data.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Modelos.pdb
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/ProyectoFinal4.Soporte.pdb
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.pdb
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/bin/Debug/Dapper.xml
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csprojResolveAssemblyReference.cache
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.csproj.CoreCompileInputs.cache
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.dll
+/Users/jorgehernandezgarcia/Documents/Repositorios Github/mtwdm-android/ApiProyectoFinal4/ProyectoFinal4.AccesoDatos/obj/Debug/ProyectoFinal4.AccesoDatos.pdb

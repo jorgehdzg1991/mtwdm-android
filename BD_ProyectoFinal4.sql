@@ -109,11 +109,11 @@ CREATE TABLE `viajes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
---  Procedure definition for `proc_DetallesViajes_Ins`
+--  Procedure definition for `proc_detallesviajes_Ins`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_DetallesViajes_Ins`;
+DROP PROCEDURE IF EXISTS `proc_detallesviajes_Ins`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_DetallesViajes_Ins`(p_ViajesId int
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_detallesviajes_Ins`(p_viajesId int
     , p_FechaInicio datetime
     , p_FechaFin datetime
     , p_KilometrajeInicial double
@@ -121,7 +121,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_DetallesViajes_Ins`(p_ViajesId
     , p_Observaciones varchar(255))
 begin
 
-	insert into ProyectoFinal4.DetallesViaje
+	insert into proyectofinal4.detallesviaje
 	(
 		ViajeId
     , FechaInicio
@@ -132,7 +132,7 @@ begin
 	)
 	values
 	(
-		p_ViajesId
+		p_viajesId
 		, p_FechaInicio
 		, p_FechaFin
 		, p_KilometrajeInicial
@@ -145,18 +145,18 @@ end
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_GastosViajes_Ins`
+--  Procedure definition for `proc_gastosviajes_Ins`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_GastosViajes_Ins`;
+DROP PROCEDURE IF EXISTS `proc_gastosviajes_Ins`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_GastosViajes_Ins`(
-	p_ViajesId int
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_gastosviajes_Ins`(
+	p_viajesId int
     , p_TipoGastoId int
     , p_Monto double
 )
 begin
 
-	insert into ProyectoFinal4.GastosViajes
+	insert into proyectofinal4.gastosviajes
 	(
 		ViajeId
 		, TipoGastoId
@@ -164,7 +164,7 @@ begin
 	)
 	values
 	(
-		p_ViajesId
+		p_viajesId
 		, p_TipoGastoId
 		, p_Monto
 	);
@@ -174,17 +174,17 @@ end
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_PosicionesViaje_Ins`
+--  Procedure definition for `proc_posicionesviaje_Ins`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_PosicionesViaje_Ins`;
+DROP PROCEDURE IF EXISTS `proc_posicionesviaje_Ins`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_PosicionesViaje_Ins`(IN `p_ViajesId` int,IN `p_Fecha` datetime,IN `p_Latitud` double,IN `p_Longitud` double)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_posicionesviaje_Ins`(IN `p_viajesId` int,IN `p_Fecha` datetime,IN `p_Latitud` double,IN `p_Longitud` double)
 BEGIN
 
 	declare
 		v_IdCoordenada int;
 	
-	insert into Coordenadas
+	insert into coordenadas
 	(
 		Latitud
 		, Longitud
@@ -198,7 +198,7 @@ BEGIN
 	set
 		v_IdCoordenada = last_insert_id();
 
-	insert into PosicionesViaje
+	insert into posicionesviaje
 	(
 		ViajeId
 		, CoordenadaId
@@ -206,7 +206,7 @@ BEGIN
 	)
 	values
 	(
-		p_ViajesId
+		p_viajesId
 		, v_IdCoordenada
 		, p_Fecha
 	);
@@ -216,11 +216,11 @@ END
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_Usuarios_Obt_Credenciales`
+--  Procedure definition for `proc_usuarios_Obt_Credenciales`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_Usuarios_Obt_Credenciales`;
+DROP PROCEDURE IF EXISTS `proc_usuarios_Obt_Credenciales`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_Usuarios_Obt_Credenciales`(p_Correo varchar(45)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_usuarios_Obt_Credenciales`(p_Correo varchar(45)
     , p_Contrasena varchar(45))
 BEGIN
 
@@ -232,7 +232,7 @@ BEGIN
 		, TipoUsuarioId as 'ClaveTipoUsuario'
 		, Estatus
 	from
-		ProyectoFinal4.Usuarios
+		proyectofinal4.usuarios
 	where
 		Correo = p_Correo
 		and Contrasena = p_Contrasena
@@ -243,33 +243,33 @@ END
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_Viajes_ActualizarEstatusViaje`
+--  Procedure definition for `proc_viajes_ActualizarEstatusViaje`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_Viajes_ActualizarEstatusViaje`;
+DROP PROCEDURE IF EXISTS `proc_viajes_ActualizarEstatusViaje`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_Viajes_ActualizarEstatusViaje`(
-	p_ViajesId int
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_ActualizarEstatusViaje`(
+	p_viajesId int
     , p_EstatusViaje int
 )
 BEGIN
 
 	update
-		ProyectoFinal4.Viajes
+		proyectofinal4.viajes
 	set
 		EstatusViaje = p_EstatusViaje
 	where
-		Id = p_ViajesId;
+		Id = p_viajesId;
 
 END
 ;;
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_Viajes_Obt`
+--  Procedure definition for `proc_viajes_Obt`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_Viajes_Obt`;
+DROP PROCEDURE IF EXISTS `proc_viajes_Obt`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_Viajes_Obt`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt`()
 BEGIN
 
 	select
@@ -280,19 +280,19 @@ BEGIN
 		, Fecha
 		, EstatusViaje as 'ClaveEstatusViaje'
 	from
-		ProyectoFinal4.Viajes;
+		proyectofinal4.viajes;
 
 END
 ;;
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_Viajes_Obt_Detalle`
+--  Procedure definition for `proc_viajes_Obt_Detalle`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_Viajes_Obt_Detalle`;
+DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Detalle`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_Viajes_Obt_Detalle`(
-	p_ViajesId int
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt_Detalle`(
+	p_viajesId int
 )
 BEGIN
 
@@ -304,9 +304,9 @@ BEGIN
 		, Fecha
 		, EstatusViaje as 'ClaveEstatusViaje'
 	from
-		ProyectoFinal4.Viajes
+		proyectofinal4.viajes
 	where
-		Id = p_ViajesId;
+		Id = p_viajesId;
         
 	select
 		Id as 'DetalleViajeId'
@@ -317,9 +317,9 @@ BEGIN
 		, KilometrajeFinal
 		, Observaciones
 	from
-		ProyectoFinal4.DetallesViaje
+		proyectofinal4.detallesviaje
 	where
-		ViajeId = p_ViajesId;
+		ViajeId = p_viajesId;
 		
 	select
 		Id as 'GastoViajeId'
@@ -327,9 +327,9 @@ BEGIN
 		, TipoGastoId as 'ClaveTipoGasto'
 		, Monto
 	from
-		ProyectoFinal4.GastosViajes
+		proyectofinal4.gastosviajes
 	where
-		ViajeId = p_ViajesId;
+		ViajeId = p_viajesId;
 		
 	select
 		pos.Id as 'PosicionViajeId'
@@ -340,24 +340,24 @@ BEGIN
 		, coo.Latitud
 		, coo.Longitud
 	from
-		ProyectoFinal4.PosicionesViaje as pos
+		proyectofinal4.posicionesviaje as pos
 		inner join
-			ProyectoFinal4.Coordenadas as coo
+			proyectofinal4.coordenadas as coo
 		on
 			coo.Id = pos.CoordenadaId
 	where
-		ViajeId = p_ViajesId;
+		ViajeId = p_viajesId;
 
 END
 ;;
 DELIMITER ;
 
 -- ----------------------------
---  Procedure definition for `proc_Viajes_Obt_Operador`
+--  Procedure definition for `proc_viajes_Obt_Operador`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_Viajes_Obt_Operador`;
+DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Operador`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_Viajes_Obt_Operador`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt_Operador`(
 	p_OperadorId int
 )
 BEGIN
@@ -370,7 +370,7 @@ BEGIN
 		, Fecha
 		, EstatusViaje as 'ClaveEstatusViaje'
 	from
-		ProyectoFinal4.Viajes
+		proyectofinal4.viajes
 	where
 		OperadorId = p_OperadorId;
 
