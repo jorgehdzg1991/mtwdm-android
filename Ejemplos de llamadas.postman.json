@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:60170/api/v1/usuarios/obtenerUsuarioCredencial",
+			"name": "Obtener usuario por credencial",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -18,15 +18,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"correo\": \"jorgehdzg1991@gmail.com\",\n\t\"contrasena\": \"admin123\"\n}"
+					"raw": "{\n  \"correo\": \"jorgehdzg1991@gmail.com\",\n  \"contrasena\": \"admin123\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:60170/api/v1/usuarios/obtenerUsuarioCredencial",
+					"raw": "http://52.224.233.167:9000/api/v1/usuarios/obtenerUsuarioCredencial",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"52",
+						"224",
+						"233",
+						"167"
 					],
-					"port": "60170",
+					"port": "9000",
 					"path": [
 						"api",
 						"v1",
@@ -34,12 +37,181 @@
 						"obtenerUsuarioCredencial"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:60170/api/v1/viajes/actualizarEstatus",
+			"name": "Obtener todos los viajes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://52.224.233.167:9000/api/v1/viajes/obtenerTodosViajes",
+					"protocol": "http",
+					"host": [
+						"52",
+						"224",
+						"233",
+						"167"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"viajes",
+						"obtenerTodosViajes"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener viajes de operador",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idViaje\": 1,\n  \"estatus\": 10,\n  \"detalle\": {\n    \"viajeId\": 1,\n    \"fechaInicio\": \"2017-11-30\",\n    \"fechaFin\": \"2017-11-30\",\n    \"kilometrajeInicial\": 60000,\n    \"kilometrajeFinal\": 60450,\n    \"observaciones\": \"Se me ponchó una llanta en el camino.\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://52.224.233.167:9000/api/v1/viajes/obtenerViajesOperador/2",
+					"protocol": "http",
+					"host": [
+						"52",
+						"224",
+						"233",
+						"167"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"viajes",
+						"obtenerViajesOperador",
+						"2"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener detalle de viaje",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idViaje\": 1,\n  \"estatus\": 10,\n  \"detalle\": {\n    \"viajeId\": 1,\n    \"fechaInicio\": \"2017-11-30\",\n    \"fechaFin\": \"2017-11-30\",\n    \"kilometrajeInicial\": 60000,\n    \"kilometrajeFinal\": 60450,\n    \"observaciones\": \"Se me ponchó una llanta en el camino.\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://52.224.233.167:9000/api/v1/viajes/obtenerDetalleViaje/1",
+					"protocol": "http",
+					"host": [
+						"52",
+						"224",
+						"233",
+						"167"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"viajes",
+						"obtenerDetalleViaje",
+						"1"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar gastos de viaje",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idViaje\": 1,\n  \"gastos\": [\n    {\n      \"viajeId\": 1,\n      \"claveTipoGasto\": 3,\n      \"monto\": 1000\n    },\n    {\n      \"viajeId\": 1,\n      \"claveTipoGasto\": 4,\n      \"monto\": 500\n    },\n    {\n      \"viajeId\": 1,\n      \"claveTipoGasto\": 5,\n      \"monto\": 200\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://52.224.233.167:9000/api/v1/gastos/insertarGastosViaje",
+					"protocol": "http",
+					"host": [
+						"52",
+						"224",
+						"233",
+						"167"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"gastos",
+						"insertarGastosViaje"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar posiciones de viaje",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idViaje\": 1,\n  \"posiciones\": [\n    {\n      \"fecha\": \"2017-11-30 10:00:00\",\n      \"coordenada\": {\n        \"latitud\": 1,\n        \"longitud\": 1\n      }\n    },\n    {\n      \"fecha\": \"2017-11-30 10:01:00\",\n      \"coordenada\": {\n        \"latitud\": 2,\n        \"longitud\": 2\n      }\n    },\n    {\n      \"fecha\": \"2017-11-30 10:02:00\",\n      \"coordenada\": {\n        \"latitud\": 3,\n        \"longitud\": 3\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://52.224.233.167:9000/api/v1/posiciones/insertarPosicionesViaje",
+					"protocol": "http",
+					"host": [
+						"52",
+						"224",
+						"233",
+						"167"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"posiciones",
+						"insertarPosicionesViaje"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar estatus de viaje",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -50,15 +222,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"idViaje\": 1,\n\t\"estatus\": 10,\n\t\"detalle\": {\n\t\t\"viajeId\": 1,\n\t\t\"fechaInicio\": \"2017-11-30\",\n\t\t\"fechaFin\": \"2017-11-30\",\n\t\t\"kilometrajeInicial\": 60000,\n\t\t\"kilometrajeFinal\": 60450,\n\t\t\"observaciones\": \"Se me ponchó una llanta en el camino.\"\n\t}\n}"
+					"raw": "{\n  \"idViaje\": 1,\n  \"estatus\": 10,\n  \"detalle\": {\n    \"viajeId\": 1,\n    \"fechaInicio\": \"2017-11-30\",\n    \"fechaFin\": \"2017-11-30\",\n    \"kilometrajeInicial\": 60000,\n    \"kilometrajeFinal\": 60450,\n    \"observaciones\": \"Se me ponchó una llanta en el camino.\"\n  }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:60170/api/v1/viajes/actualizarEstatus",
+					"raw": "http://52.224.233.167:9000/api/v1/viajes/actualizarEstatus",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"52",
+						"224",
+						"233",
+						"167"
 					],
-					"port": "60170",
+					"port": "9000",
 					"path": [
 						"api",
 						"v1",
@@ -66,161 +241,7 @@
 						"actualizarEstatus"
 					]
 				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:60170/api/v1/viajes/obtenerViajesOperador/2",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"idViaje\": 1,\n\t\"estatus\": 10,\n\t\"detalle\": {\n\t\t\"viajeId\": 1,\n\t\t\"fechaInicio\": \"2017-11-30\",\n\t\t\"fechaFin\": \"2017-11-30\",\n\t\t\"kilometrajeInicial\": 60000,\n\t\t\"kilometrajeFinal\": 60450,\n\t\t\"observaciones\": \"Se me ponchó una llanta en el camino.\"\n\t}\n}"
-				},
-				"url": {
-					"raw": "http://localhost:60170/api/v1/viajes/obtenerViajesOperador/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "60170",
-					"path": [
-						"api",
-						"v1",
-						"viajes",
-						"obtenerViajesOperador",
-						"2"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:60170/api/v1/gastos/insertarGastosViaje",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"idViaje\": 1,\n\t\"gastos\": [\n\t\t{\n\t\t\t\"viajeId\": 1,\n\t\t\t\"claveTipoGasto\": 3,\n\t\t\t\"monto\": 1000\n\t\t},\n\t\t{\n\t\t\t\"viajeId\": 1,\n\t\t\t\"claveTipoGasto\": 4,\n\t\t\t\"monto\": 500\n\t\t},\n\t\t{\n\t\t\t\"viajeId\": 1,\n\t\t\t\"claveTipoGasto\": 5,\n\t\t\t\"monto\": 200\n\t\t}\n\t]\n}"
-				},
-				"url": {
-					"raw": "http://localhost:60170/api/v1/gastos/insertarGastosViaje",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "60170",
-					"path": [
-						"api",
-						"v1",
-						"gastos",
-						"insertarGastosViaje"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:60170/api/v1/posiciones/insertarPosicionesViaje",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"idViaje\": 1,\n\t\"posiciones\": [\n\t\t{\n\t\t\t\"fecha\": \"2017-11-30 10:00:00\",\n\t\t\t\"coordenada\": {\n\t\t\t\t\"latitud\": 1,\n\t\t\t\t\"longitud\": 1\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"fecha\": \"2017-11-30 10:01:00\",\n\t\t\t\"coordenada\": {\n\t\t\t\t\"latitud\": 2,\n\t\t\t\t\"longitud\": 2\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"fecha\": \"2017-11-30 10:02:00\",\n\t\t\t\"coordenada\": {\n\t\t\t\t\"latitud\": 3,\n\t\t\t\t\"longitud\": 3\n\t\t\t}\n\t\t}\n\t]\n}"
-				},
-				"url": {
-					"raw": "http://localhost:60170/api/v1/posiciones/insertarPosicionesViaje",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "60170",
-					"path": [
-						"api",
-						"v1",
-						"posiciones",
-						"insertarPosicionesViaje"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:60170/api/v1/viajes/obtenerDetalleViaje/1",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"idViaje\": 1,\n\t\"estatus\": 10,\n\t\"detalle\": {\n\t\t\"viajeId\": 1,\n\t\t\"fechaInicio\": \"2017-11-30\",\n\t\t\"fechaFin\": \"2017-11-30\",\n\t\t\"kilometrajeInicial\": 60000,\n\t\t\"kilometrajeFinal\": 60450,\n\t\t\"observaciones\": \"Se me ponchó una llanta en el camino.\"\n\t}\n}"
-				},
-				"url": {
-					"raw": "http://localhost:60170/api/v1/viajes/obtenerDetalleViaje/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "60170",
-					"path": [
-						"api",
-						"v1",
-						"viajes",
-						"obtenerDetalleViaje",
-						"1"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:60170/api/v1/viajes/obtenerTodosViajes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:60170/api/v1/viajes/obtenerTodosViajes",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "60170",
-					"path": [
-						"api",
-						"v1",
-						"viajes",
-						"obtenerTodosViajes"
-					]
-				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		}
