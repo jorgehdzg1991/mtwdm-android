@@ -11,7 +11,7 @@ namespace ProyectoFinal4.Modelos.Entidades
         public TipoUsuario ClaveTipoUsuario { get; set; }
         public bool Estatus { get; set; }
 
-        public string DescripcionTipoGasto
+        public string DescripcionTipoUsuario
         {
             get
             {

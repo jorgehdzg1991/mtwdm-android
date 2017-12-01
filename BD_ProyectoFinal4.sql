@@ -1,16 +1,27 @@
-/*
-MySQL Backup
-Source Server Version: 10.1.25
-Source Database: proyectofinal4
-Date: 30/11/2017 15:52:18
-*/
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+--
+-- Host: 52.224.233.167    Database: proyectofinal4
+-- ------------------------------------------------------
+-- Server version	5.7.20-0ubuntu0.16.04.1
 
-SET FOREIGN_KEY_CHECKS=0;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- ----------------------------
---  Table structure for `catalogosdetalle`
--- ----------------------------
+--
+-- Table structure for table `catalogosdetalle`
+--
+
 DROP TABLE IF EXISTS `catalogosdetalle`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `catalogosdetalle` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `CatalogoMaestroId` int(11) NOT NULL DEFAULT '0',
@@ -18,33 +29,75 @@ CREATE TABLE `catalogosdetalle` (
   `Estatus` bit(1) NOT NULL DEFAULT b'1',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `catalogosmaestro`
--- ----------------------------
+--
+-- Dumping data for table `catalogosdetalle`
+--
+
+LOCK TABLES `catalogosdetalle` WRITE;
+/*!40000 ALTER TABLE `catalogosdetalle` DISABLE KEYS */;
+INSERT INTO `catalogosdetalle` VALUES (1,1,'Administrador',''),(2,1,'Operador',''),(3,2,'Gasolina',''),(4,2,'Casetas',''),(5,2,'Alimentos',''),(6,2,'Hospedaje',''),(7,2,'Otros',''),(8,3,'Iniciado',''),(9,3,'Entregado',''),(10,3,'Terminado',''),(11,3,'No iniciado','');
+/*!40000 ALTER TABLE `catalogosdetalle` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `catalogosmaestro`
+--
+
 DROP TABLE IF EXISTS `catalogosmaestro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `catalogosmaestro` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Descripcion` varchar(45) NOT NULL DEFAULT '',
   `Estatus` bit(1) NOT NULL DEFAULT b'1',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `coordenadas`
--- ----------------------------
+--
+-- Dumping data for table `catalogosmaestro`
+--
+
+LOCK TABLES `catalogosmaestro` WRITE;
+/*!40000 ALTER TABLE `catalogosmaestro` DISABLE KEYS */;
+INSERT INTO `catalogosmaestro` VALUES (1,'Usuarios',''),(2,'Gastos',''),(3,'Estatus de viaje','');
+/*!40000 ALTER TABLE `catalogosmaestro` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `coordenadas`
+--
+
 DROP TABLE IF EXISTS `coordenadas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `coordenadas` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Latitud` double NOT NULL DEFAULT '0',
   `Longitud` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `detallesviaje`
--- ----------------------------
+--
+-- Dumping data for table `coordenadas`
+--
+
+LOCK TABLES `coordenadas` WRITE;
+/*!40000 ALTER TABLE `coordenadas` DISABLE KEYS */;
+INSERT INTO `coordenadas` VALUES (1,1,1),(2,2,2),(3,3,3);
+/*!40000 ALTER TABLE `coordenadas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `detallesviaje`
+--
+
 DROP TABLE IF EXISTS `detallesviaje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `detallesviaje` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ViajeId` int(11) NOT NULL DEFAULT '0',
@@ -55,11 +108,25 @@ CREATE TABLE `detallesviaje` (
   `Observaciones` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `gastosviajes`
--- ----------------------------
+--
+-- Dumping data for table `detallesviaje`
+--
+
+LOCK TABLES `detallesviaje` WRITE;
+/*!40000 ALTER TABLE `detallesviaje` DISABLE KEYS */;
+INSERT INTO `detallesviaje` VALUES (1,1,'2017-11-30 00:00:00','2017-11-30 00:00:00',60000,60450,'Se me ponchó una llanta en el camino.');
+/*!40000 ALTER TABLE `detallesviaje` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gastosviajes`
+--
+
 DROP TABLE IF EXISTS `gastosviajes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gastosviajes` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ViajeId` int(11) NOT NULL DEFAULT '0',
@@ -67,23 +134,51 @@ CREATE TABLE `gastosviajes` (
   `Monto` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `posicionesviaje`
--- ----------------------------
+--
+-- Dumping data for table `gastosviajes`
+--
+
+LOCK TABLES `gastosviajes` WRITE;
+/*!40000 ALTER TABLE `gastosviajes` DISABLE KEYS */;
+INSERT INTO `gastosviajes` VALUES (1,1,3,1000),(2,1,4,500),(3,1,5,200);
+/*!40000 ALTER TABLE `gastosviajes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `posicionesviaje`
+--
+
 DROP TABLE IF EXISTS `posicionesviaje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `posicionesviaje` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `ViajeId` int(11) NOT NULL DEFAULT '0',
   `CoordenadaId` int(11) NOT NULL DEFAULT '0',
   `Fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `usuarios`
--- ----------------------------
+--
+-- Dumping data for table `posicionesviaje`
+--
+
+LOCK TABLES `posicionesviaje` WRITE;
+/*!40000 ALTER TABLE `posicionesviaje` DISABLE KEYS */;
+INSERT INTO `posicionesviaje` VALUES (1,1,1,'2017-11-30 10:00:00'),(2,1,2,'2017-11-30 10:01:00'),(3,1,3,'2017-11-30 10:02:00');
+/*!40000 ALTER TABLE `posicionesviaje` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuarios`
+--
+
 DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(45) NOT NULL DEFAULT '',
@@ -93,11 +188,25 @@ CREATE TABLE `usuarios` (
   `Estatus` bit(1) NOT NULL DEFAULT b'1',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Table structure for `viajes`
--- ----------------------------
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Jorge Hernandez','jorgehdzg1991@gmail.com','0192023A7BBD73250516F069DF18B500',1,''),(2,'Carlos Pozo','carlitros@gmail.com','CC03E747A6AFBBCBF8BE7668ACFEBEE5',2,'');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `viajes`
+--
+
 DROP TABLE IF EXISTS `viajes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `viajes` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `OperadorId` int(11) NOT NULL DEFAULT '0',
@@ -106,12 +215,35 @@ CREATE TABLE `viajes` (
   `Fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `EstatusViaje` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
---  Procedure definition for `proc_detallesviajes_Ins`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_detallesviajes_Ins`;
+--
+-- Dumping data for table `viajes`
+--
+
+LOCK TABLES `viajes` WRITE;
+/*!40000 ALTER TABLE `viajes` DISABLE KEYS */;
+INSERT INTO `viajes` VALUES (1,2,'León, Guanajuato','CDMX','2017-11-30 23:12:59',10);
+/*!40000 ALTER TABLE `viajes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping events for database 'proyectofinal4'
+--
+
+--
+-- Dumping routines for database 'proyectofinal4'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `proc_detallesviajes_Ins` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_detallesviajes_Ins`(p_viajesId int
     , p_FechaInicio datetime
@@ -140,14 +272,21 @@ begin
 		, p_Observaciones
 	);
 
-end
-;;
+end ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_gastosviajes_Ins`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_gastosviajes_Ins`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_gastosviajes_Ins` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_gastosviajes_Ins`(
 	p_viajesId int
@@ -169,14 +308,21 @@ begin
 		, p_Monto
 	);
 
-end
-;;
+end ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_posicionesviaje_Ins`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_posicionesviaje_Ins`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_posicionesviaje_Ins` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_posicionesviaje_Ins`(IN `p_viajesId` int,IN `p_Fecha` datetime,IN `p_Latitud` double,IN `p_Longitud` double)
 BEGIN
@@ -211,14 +357,21 @@ BEGIN
 		, p_Fecha
 	);
 
-END
-;;
+END ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_usuarios_Obt_Credenciales`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_usuarios_Obt_Credenciales`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_usuarios_Obt_Credenciales` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_usuarios_Obt_Credenciales`(p_Correo varchar(45)
     , p_Contrasena varchar(45))
@@ -238,14 +391,21 @@ BEGIN
 		and Contrasena = p_Contrasena
 		and Estatus = 1;
 
-END
-;;
+END ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_viajes_ActualizarEstatusViaje`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_viajes_ActualizarEstatusViaje`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_viajes_ActualizarEstatusViaje` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_ActualizarEstatusViaje`(
 	p_viajesId int
@@ -260,14 +420,21 @@ BEGIN
 	where
 		Id = p_viajesId;
 
-END
-;;
+END ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_viajes_Obt`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_viajes_Obt`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_viajes_Obt` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt`()
 BEGIN
@@ -282,14 +449,21 @@ BEGIN
 	from
 		proyectofinal4.viajes;
 
-END
-;;
+END ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_viajes_Obt_Detalle`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Detalle`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Detalle` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt_Detalle`(
 	p_viajesId int
@@ -348,14 +522,21 @@ BEGIN
 	where
 		ViajeId = p_viajesId;
 
-END
-;;
+END ;;
 DELIMITER ;
-
--- ----------------------------
---  Procedure definition for `proc_viajes_Obt_Operador`
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Operador`;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `proc_viajes_Obt_Operador` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_viajes_Obt_Operador`(
 	p_OperadorId int
@@ -374,18 +555,20 @@ BEGIN
 	where
 		OperadorId = p_OperadorId;
 
-END
-;;
+END ;;
 DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
--- ----------------------------
---  Records 
--- ----------------------------
-INSERT INTO `catalogosdetalle` VALUES ('1','1','Administrador',''), ('2','1','Operador',''), ('3','2','Gasolina',''), ('4','2','Casetas',''), ('5','2','Alimentos',''), ('6','2','Hospedaje',''), ('7','2','Otros',''), ('8','3','Iniciado',''), ('9','3','Entregado',''), ('10','3','Terminado',''), ('11','3','No iniciado','');
-INSERT INTO `catalogosmaestro` VALUES ('1','Usuarios',''), ('2','Gastos',''), ('3','Estatus de viaje','');
-INSERT INTO `coordenadas` VALUES ('1','1','1'), ('2','2','2'), ('3','3','3'), ('4','1','1'), ('5','2','2'), ('6','3','3');
-INSERT INTO `detallesviaje` VALUES ('1','1','2017-11-30 00:00:00','2017-11-30 00:00:00','60000','60450','Se me ponchó una llanta en el camino.');
-INSERT INTO `gastosviajes` VALUES ('1','1','3','1000'), ('2','1','4','500'), ('3','1','5','200');
-INSERT INTO `posicionesviaje` VALUES ('1','1','1','2017-11-30 10:00:00'), ('2','1','2','2017-11-30 10:01:00'), ('3','1','3','2017-11-30 10:02:00'), ('4','1','4','2017-11-30 10:00:00'), ('5','1','5','2017-11-30 10:01:00'), ('6','1','6','2017-11-30 10:02:00');
-INSERT INTO `usuarios` VALUES ('1','Jorge Hernandez','jorgehdzg1991@gmail.com','0192023A7BBD73250516F069DF18B500','1',''), ('2','Carlos Pozo','carlitros@gmail.com','CC03E747A6AFBBCBF8BE7668ACFEBEE5','2','');
-INSERT INTO `viajes` VALUES ('1','2','Desde aquí','Hasta allá','2017-11-30 13:15:17','10'), ('2','2','León, Gto','CDMX','2017-11-30 13:15:19','11');
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-12-01 13:05:20
