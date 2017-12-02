@@ -1,0 +1,123 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtwdm.android.transportaappadmin.gui.GastosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="1dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment para agregar gastos de viaje.">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="48dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="24dp"
+                    android:hint="Operador"
+                    android:inputType="number"
+                    android:id="@+id/txtOperador"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/txtOperador"
+                    android:layout_marginTop="24dp"
+                    android:hint="Total Comida"
+                    android:inputType="number"
+                    android:id="@+id/txtTotComida"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/txtTotComida"
+                    android:layout_marginTop="24dp"
+                    android:hint="Total Casetas"
+                    android:inputType="number"
+                    android:id="@+id/txtTotCasetas"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/txtTotCasetas"
+                    android:layout_marginTop="24dp"
+                    android:hint="Total hospedaje"
+                    android:inputType="number"
+                    android:id="@+id/txtTotHospedaje"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/txtTotHospedaje"
+                    android:layout_marginTop="24dp"
+                    android:hint="Total Otros"
+                    android:inputType="number"
+                    android:id="@+id/txtTotOtros"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/txtTotOtros"
+                    android:layout_marginTop="24dp"
+                    android:hint="Descripción de Gastos Varios"
+                    android:inputType="textCapCharacters"
+                    android:id="@+id/txtObservaciones"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/txtObservaciones">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:gravity="center"
+                        android:paddingLeft="28dp"
+                        android:drawableStart="@drawable/ic_done_white_18dp"
+                        android:drawableLeft="@drawable/ic_done_white_18dp"
+                        android:id="@+id/btnGastosGuardar"
+                        android:background="@color/actionPrimary"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:paddingLeft="28dp"
+                        android:drawableStart="@drawable/ic_space_bar_white_18dp"
+                        android:drawableLeft="@drawable/ic_done_white_18dp"
+                        android:text=""
+                        android:id="@+id/btnGastosLimpiar"
+                        android:background="@color/actionSecondary"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:paddingLeft="28dp"
+                        android:drawableStart="@drawable/ic_delete_forever_white_18dp"
+                        android:drawableLeft="@drawable/ic_done_white_18dp"
+                        android:text=""
+                        android:id="@+id/btnGastosBorrar"
+                        android:background="@color/actionWarning"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

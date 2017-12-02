@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/renglon_viaje"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorButtonNormal"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/lblOrigen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Origen: León, Gto, Mex"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lblDestino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Destino: Aguascalientes, Ags, Mex"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lblFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Fecha: 2018/01/01"
+        android:textSize="16sp" />
+
+</LinearLayout>

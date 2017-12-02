@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="com.mtwdm.android.transportaappadmin.gui.MainActivity">
+
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/main_activity_titulo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:id="@+id/lblEtiquetaSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lblTitulo"
+        android:layout_marginTop="24dp"
+        android:text="@string/main_activity_lblEtiquetaSpinner_text"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    <Spinner
+        android:id="@+id/spnOperador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lblEtiquetaSpinner"
+        android:layout_alignStart="@id/lblEtiquetaSpinner"
+        android:layout_below="@id/lblEtiquetaSpinner"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/spnOperador"
+        android:layout_alignStart="@+id/spnOperador"
+        android:layout_below="@+id/spnOperador"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rclvViajes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/lblNoHayRegistros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/main_activity_lblNoHayRegistros_text"
+            android:visibility="gone"/>
+    </LinearLayout>
+</android.widget.RelativeLayout>

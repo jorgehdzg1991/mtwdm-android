@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TransportaAppAdmin</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Mapa</string>
+
+    <!-- LoginActivity -->
+    <string name="login_activity_titulo">Iniciar sesión</string>
+    <string name="login_activity_txtCorreo_hint">Correo electrónico</string>
+    <string name="login_activity_txtContrasena_hint">Contraseña</string>
+    <string name="login_activity_btnIniciarSesion_text">Iniciar Sesión</string>
+
+    <!-- MainActivity -->
+    <string name="main_activity_titulo">Listado de viajes</string>
+    <string name="main_activity_lblEtiquetaSpinner_text">Filtrar por operador:</string>
+    <string name="main_activity_lblNoHayRegistros_text">No se encontraron viajes :(</string>
+</resources>
